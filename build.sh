@@ -38,10 +38,10 @@ unzip -d . "$tarfile" >/dev/null
 
 dir="node-$nodever"
 cd "$dir"
-patch -p0 < ../android-configure.patch
+patch -p0 < ../android_configure.py.patch
 chmod +x ./android-configure
-cat ./android-configure
-./android-configure "$ANDROID_HOME/ndk/$ndkver" "$arch" "$sdkver"
+#cat ./android-configure
+./android-configure "$ANDROID_HOME/ndk/$ndkver" "$sdkver" "$arch"
 make
 
 outdir="build"
