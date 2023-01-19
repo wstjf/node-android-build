@@ -38,7 +38,7 @@ unzip -d . "$tarfile" >/dev/null
 
 dir="node-$nodever"
 cd "$dir"
-patch -p0 < ../android_configure.py.patch
+patch -p0 ./android_configure.py ../android_configure.py.patch
 chmod +x ./android-configure
 #cat ./android-configure
 ./android-configure "$ANDROID_HOME/ndk/$ndkver" "$sdkver" "$arch"
