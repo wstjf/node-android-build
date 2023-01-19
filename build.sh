@@ -40,6 +40,7 @@ dir="node-$nodever"
 cd "$dir"
 patch -p0 ./android_configure.py ../android_configure.py.patch
 chmod +x ./android-configure
+ls $ANDROID_HOME
 #cat ./android-configure
 ./android-configure "$ANDROID_HOME/ndk/$ndkver" "$sdkver" "$arch"
 make
