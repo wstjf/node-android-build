@@ -50,7 +50,7 @@ make
 outdir="build"
 mkdir -p "../$outdir/lib"
 HEADERS_ONLY=1 python3 ./tools/install.py install "../$outdir" /
-cp -rpf "./out/Release/libnode.so" "../$outdir/lib/libnode.so"
+cp -rpf "./out/Release/" "../$outdir/Release/"
 cd ..
 
 zipname="build-$nodever.zip"
